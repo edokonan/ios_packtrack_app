@@ -1,0 +1,9 @@
+packtrack/Pods
+packtrack/证书
+packtrack/packtrackpro.entitlements
+packtrack/packtrackpro_production.entitlements
+packtrackpro_production.entitlements
+Podfile.lock
+GoogleService-Info.plist
+ServiceAccount.json
+packtrack.entitlements
