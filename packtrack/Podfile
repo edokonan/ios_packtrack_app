@@ -1,0 +1,100 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+swift_version = '3.0'
+use_frameworks!
+
+
+target 'packtrack' do
+    
+    #pod 'ZBarSDK', '~> 1.3’
+	pod 'LBXScan/LBXZXing','~> 2.2'
+	pod 'LBXScan/UI','~> 2.2'
+    
+    #pod 'iRate', '~> 1.11.4'
+    
+    pod 'XLForm', '~> 3.0.0'
+    pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON', '~> 3.1.4'
+    #pod 'PZPullToRefresh'
+    #pod 'IJReachability', git: 'https://github.com/thejourneydude/IJReachability.git', branch: 'swift2-with-autodetect'
+    
+    #pod 'MaterialKit'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'FMDB'
+    
+    pod 'SVProgressHUD'
+    
+    pod 'Firebase/Core'    # 必备库和 Analytics
+    pod 'Firebase/Messaging'
+    pod 'Firebase/AdMob'    # AdMob
+    #pod 'Firebase/Crash'    # 崩溃报告
+    #pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+    pod 'Firebase/Auth'    # 身份验证
+    pod 'Firebase/Database'    # 实时数据库
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Storage'
+    pod 'Firebase/RemoteConfig'
+    pod 'Google/Analytics'
+    
+    # Pods for PodTest
+    pod 'Fabric', '~> 1.7.6'
+    pod 'Crashlytics', '~> 3.10.1'
+
+    #使用
+    pod 'Pring'
+    
+    #带头部的视图
+    #pod "CSStickyHeaderFlowLayout"
+    #pod "GSKStretchyHeaderView"
+    
+    #美观的输入框
+    pod 'SkyFloatingLabelTextField', '~> 3.0'
+    
+    #WebView
+    pod 'TOWebViewController'
+    pod 'DZNWebViewController'
+    #BAWKWebView
+    
+    #store
+    pod 'SwiftyStoreKit'
+    
+    #web SDWebImage
+    pod 'SDWebImage', '~> 4.0'
+    
+    #web parse
+    #pod 'Fuzi', '~> 1.0.0'
+    pod 'Kanna', '~> 4.0.0'
+    
+    #pod 'IceCream'
+    pod 'IceCream'
+    pod 'RxRealm'
+    
+    target 'packtrackpro' do
+        
+    end
+end
+
+target 'shareextension' do
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '4.0'
+        end
+    end
+end
+
+#swift4_names = [
+#'Some-Swift4-Library1',
+#'Some-Swift4-Library2'
+#]
+#swift3_names = [
+#'Some-Swift4-Library1',
+#'Some-Swift4-Library2'
+#]
+#if swift4_names.include? target.name
+#    config.build_settings['SWIFT_VERSION'] = "4.0"
+#    else
+#    config.build_settings['SWIFT_VERSION'] = "3.2"
+#end

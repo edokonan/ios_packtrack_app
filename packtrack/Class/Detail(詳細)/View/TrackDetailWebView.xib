@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TrackDetailWebView" id="iN0-l3-epB" customClass="TrackDetailWebView" customModule="packtrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vcs-1c-Dx1">
+                    <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="GRU-6e-wqr" userLabel="width = 60"/>
+                        <constraint firstAttribute="height" constant="60" id="VJE-57-v9h" userLabel="height = 60"/>
+                    </constraints>
+                </activityIndicatorView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th5-FV-teG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CT0-Kp-W0n">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="Uu6-E4-Ahe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CT0-Kp-W0n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GJb-5n-g9M"/>
+                <constraint firstAttribute="trailing" secondItem="CT0-Kp-W0n" secondAttribute="trailing" id="MiC-JQ-BBw"/>
+                <constraint firstItem="th5-FV-teG" firstAttribute="top" secondItem="CT0-Kp-W0n" secondAttribute="bottom" id="QRG-mx-V4Q"/>
+                <constraint firstAttribute="bottom" secondItem="th5-FV-teG" secondAttribute="bottom" id="SxD-ft-3bq"/>
+                <constraint firstItem="th5-FV-teG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gsg-Gr-qGW"/>
+                <constraint firstItem="CT0-Kp-W0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kRz-JH-iiI"/>
+                <constraint firstAttribute="trailing" secondItem="th5-FV-teG" secondAttribute="trailing" id="kyX-dW-dqn"/>
+                <constraint firstItem="vcs-1c-Dx1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lGL-xh-LSW"/>
+                <constraint firstItem="vcs-1c-Dx1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oMD-89-9em"/>
+            </constraints>
+            <connections>
+                <outlet property="ADView" destination="CT0-Kp-W0n" id="brp-q8-gsa"/>
+                <outlet property="ADViewHeight" destination="Uu6-E4-Ahe" id="g1j-Fa-UoA"/>
+                <outlet property="loadingView" destination="vcs-1c-Dx1" id="zC0-xt-105"/>
+                <outlet property="webView" destination="th5-FV-teG" id="830-as-baO"/>
+            </connections>
+            <point key="canvasLocation" x="90.5" y="159.5"/>
+        </view>
+    </objects>
+</document>
